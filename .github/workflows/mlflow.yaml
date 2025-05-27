@@ -76,4 +76,4 @@ jobs:
           context: "."
           file: Dockerfile
           push: true
-          tags: 3788/fastapi:{{ github.sha }}   
+          tags: 3788/fastapi:${{ github.sha }}   
