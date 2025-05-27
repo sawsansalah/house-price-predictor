@@ -78,4 +78,4 @@ jobs:
           context: "."
           file: Dockerfile
           push: true
-          tags: ${{ DOCKERHUB_USERNAME }}/fastapi:${{  env.SHORT_SHA }}   
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/fastapi:${{  env.SHORT_SHA }}   
