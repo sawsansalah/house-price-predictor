@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  e2e-workflow:
+  e2e-mlops-workflow:
     runs-on: ubuntu-latest
 
     steps:
