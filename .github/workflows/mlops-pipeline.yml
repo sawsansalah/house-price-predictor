@@ -166,9 +166,9 @@ jobs:
         username: ${{ vars.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
      
-    - name: Push Docker image to GHCR
+    - name: Push Docker image to Docker
       run: |
         COMMIT_HASH=$(echo ${{ github.sha }} | cut -c1-7)
-        docker tag docker.io/${{ github.repository_owner }}/house-price-model:$COMMIT_HASH docker.io/${{ vars.DOCKERHUB_USERNAME }}/house-price-model:latest
-        docker push docker.io/${{vars.DOCKERHUB_USERNAME }}/house-price-model:$COMMIT_HASH
+        docker tag docker.io/${{ vars.DOCKERHUB_USERNAME  }}/house-price-model:$COMMIT_HASH docker.io/${{ vars.DOCKERHUB_USERNAME }}/house-price-model:latest
+        docker push docker.io/${{ vars.DOCKERHUB_USERNAME }}/house-price-model:$COMMIT_HASH
         docker push docker.io/${{ vars.DOCKERHUB_USERNAME }}/house-price-model:latest
